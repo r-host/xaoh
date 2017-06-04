@@ -1,0 +1,511 @@
+/* 4.1 - TOPBAR */
+.header{
+	.topbar{
+	    background-color: rgba(0,0,0,.04);
+		height: 48px;
+
+		.topbar-left{
+			color: rgba($black_3, .8);
+			font-size: 12px;
+			line-height: 40px;
+			.fa{
+				margin-right: 5px;
+			}
+		}
+		.topbar-right{
+			text-align: right;
+			font-size: 13px;
+			.fa{
+				margin-right: 10px;
+			}
+
+		}
+	}
+	&.header-5{
+		.topbar{
+	    	background-color: transparent;
+	    	border-bottom: 1px solid rgba(0,0,0,.04);
+		}
+	}
+}
+
+.topbar-logo{
+	background-color: $white;
+    padding: 8px 0;
+	
+}
+.container-nav{
+	padding: 5px 0;
+}
+.contact-info{
+	float: right;
+    margin-top: 15px;
+	> div{
+		display: inline-table;
+		margin-right: 40px;
+	}
+}
+.navbar-toggle .icon-bar {
+     background: $color_1;
+}
+.navbar-toggle{
+	float: left;
+}
+
+/* 4.2 - NAVBAR */
+.rowe{
+	background-color: $white;
+  	border-top: 1px solid #ccc;
+}
+.navbar-main {
+	background-color: transparent;
+	border-radius: 0;
+	margin-bottom: 0;
+	border: 0;
+	-webkit-transition: padding .2s ease-in-out;
+	transition: padding .2s ease-in-out;
+    padding-top: 0;
+    border-bottom: 1px solid #ccc;
+    
+    &.landing{
+	 	border: 1px solid rgba($white, .2);
+	 	position: absolute;
+	    z-index: 2;
+	    width: 100%;
+    }
+	> .container{
+		position: relative;
+	}
+
+	.navbar-brand{
+		padding: 10px 0 0 30px;
+		height: 60px;
+		-webkit-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+	}
+
+	.logo-stiky{
+		display: none;
+	}
+
+  	.navbar-collapse{
+  		padding-right: 0;
+    	padding-left: 0;
+  	}
+  	ol, li{
+  		margin: 0 0;
+  	}
+  	.nav li a{
+		font-size: 13px;
+		text-transform: uppercase;
+  	}
+  	.nav > li > a {
+  		font-family: $font_1;
+		color: $font__navbar-color;
+  	}
+	.nav > li.active > a,
+	.nav > li > a:hover,
+	.nav > li > a:focus {
+		color: $font__navbar-hover-color;
+		background-color: transparent;
+	}  
+	.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+		background-color: transparent;
+		border-color: transparent;
+		color: $font__navbar-hover-color;
+	}
+	.caret {
+		margin-left: 10px;
+	}
+	.nav.navbar-nav{
+	    position: relative;
+    	z-index: 5;
+	}
+	.nav.navbar-right > li{
+  		margin-right: 15px;
+	}
+	.fa{
+  		font-size: 18px;
+  	}
+	.dropdown-menu{
+		background-color: $black_3;
+		min-width: 180px;
+		color: $white;
+		padding: 0;
+		border: 0;
+		border-radius: 0;
+		> li{
+			//border-bottom: 1px solid lighten($color_1, 10%);
+			a{
+				padding: 10px 20px;
+			    color: $white;
+			    &:hover{
+		    	    background-color: transparent;
+		    	    color: $color_3;
+			    }
+			}
+		}
+	}
+
+
+	/* STIKY NAVBAR */
+	&.stiky{
+		position: fixed;
+		background-color: $white;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 1030;
+		padding-top: 40px;
+		@include translateY(-40px);
+		-webkit-animation-duration: .3s;
+		animation-duration: .3s;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+		box-shadow: 0 1px 2px rgba(0,0,0,.2);
+		border-bottom: 1px solid rgba($black_3,.2);
+
+		&.landing{
+		    .navbar-brand{
+		    	img{
+		    		display: none;
+		    	}
+				.logo-stiky{
+					display: block;
+				}
+			}
+		}
+
+		.nav > li > a {
+			color: $color_1;
+	  	}
+	  	.nav > li.active > a,
+		.nav > li > a:hover,
+		.nav > li > a:focus {
+			color: $font__navbar-hover-color;
+		} 
+		
+	}
+	
+
+}
+.header-1{
+	.navbar-main{
+    	&.open{
+    		.navbar-nav{
+    			display: none;
+    		}
+    	}
+    	.container-nav {
+		    padding: 24px 15px;
+		}
+    	.nav > li > a {
+			color: $black_3;
+	  	}
+	  	.header-search{
+	  		float: right;
+	  		.search-trigger{
+		  		float: right;
+	  		}
+	  		.search{
+	  			display: inline-block;
+	  			/*display: none;*/
+	  		}
+	  	}
+	  	&.stiky{
+			.container-nav {
+			    padding: 5px 15px;
+			}
+	  	}
+    }
+}
+.header-2{
+	.navbar-main{
+	 	border: 1px solid rgba($white, .2);
+	 	position: absolute;
+	    z-index: 10;
+	    width: 100%;
+
+	   &.open{
+    		.navbar-nav{
+    			display: none;
+    		}
+    	}
+    	.container-nav {
+		    padding: 24px 15px;
+		}
+    	.nav > li > a {
+			color: $black_3;
+	  	}
+	  	.header-search{
+	  		float: right;
+	  		.search-trigger{
+		  		float: right;
+	  		}
+	  		.search{
+	  			display: inline-block;
+	  			/*display: none;*/
+	  		}
+	  	}
+	  	&.stiky{
+	  		position: fixed;
+			.container-nav {
+			    padding: 5px 15px;
+			}
+	  	}
+    }
+}
+.header-3{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	z-index: 10;
+
+	.box-icon-1{
+		.icon,
+		.body-content,
+		.heading{
+			color: #000;
+		}
+	} 
+ 	.navbar-main{
+	   
+		> .container-nav{
+    		background: rgba($color_3, .85);
+		}
+    	.navbar-brand{
+			float: none;
+			position: absolute;
+			top: -90px;
+    	}
+    	.nav > li > a {
+			color: $black_3;
+			&:hover{
+				color: $white;
+			}
+	  	}
+    	&.stiky{
+    		> .container-nav{
+	    		background: $white;
+			}
+			.navbar-brand{
+				float: left;
+				position: static;
+	    	}
+	    	.navbar-nav{
+	    		float: right !important;
+    			margin-right: -15px;
+	    	}
+	    	.navbar-form{
+	    		display: none;
+	    	}
+    	}
+    	.navbar-form{
+    		input[type=text]{
+	    		@include border-radius(30px);
+	    		height: auto;
+	    		background: darken($color_3, 10);
+	    		border: 0;
+	    		color: $white;
+    		&::-webkit-input-placeholder {
+			    color: $white;
+			}
+			&:-moz-placeholder {
+			    color: $white;
+			}
+			&::-moz-placeholder {
+			    color: $white;
+			}
+			&:-ms-input-placeholder {
+			    color: $white;
+			}
+    		}
+    	}
+    	.navbar-right {
+		    margin-right: 0;
+		}
+    }
+}
+.header-4{
+	.navbar-main{
+	 	border: 1px solid rgba($white, .2);
+	 	position: absolute;
+	    z-index: 10;
+	    width: 100%;
+
+	   &.open{
+    		.navbar-nav{
+    			display: none;
+    		}
+    	}
+    	.container-nav {
+		    padding: 24px 15px;
+		}
+    	.nav > li > a {
+			color: $black_3;
+	  	}
+	  	.header-search{
+	  		float: right;
+	  		.search-trigger{
+		  		float: right;
+	  		}
+	  		.search{
+	  			display: inline-block;
+	  			/*display: none;*/
+	  		}
+	  	}
+	  	&.stiky{
+	  		position: fixed;
+			.container-nav {
+			    padding: 5px 15px;
+			}
+	  	}
+    }
+}
+.header-5{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	z-index: 10;
+
+	.box-icon-1{
+		.icon,
+		.body-content,
+		.heading{
+			color: #000;
+		}
+	}
+	
+	.navbar-main{
+		background: rgba($black_3, .2);
+
+    	.navbar-brand{
+			float: none;
+			position: absolute;
+			top: -90px;
+    	}
+    	&.stiky{
+			.navbar-brand{
+				float: left;
+				position: static;
+	    	}
+	    	.navbar-nav{
+	    		float: right !important;
+    			margin-right: -15px;
+	    	}
+	    	.navbar-form{
+	    		display: none;
+	    	}
+    	}
+    	&.stiky{
+			background-color: $white;
+		}
+	}
+}
+
+.topbar-info{
+	padding: 30px 0 20px 0;
+}
+.box-info{
+	display: inline-block;
+	.item{
+		display: inline-block;
+	    padding-right: 30px;
+	}
+}
+
+.navbar-main{
+	.social-icon{
+		float: right;
+    	margin-top: 13px;
+    	margin-bottom: 0;
+	}
+	@media (max-width: 767px) {
+		.social-icon{
+			display: none;
+		 }
+	}
+}
+.social-icon{
+
+	li{
+		list-style: none;
+		float: left;
+		margin: 0 2px;
+		text-align: center;
+		a{
+			display: block;
+			width: 35px;
+			height: 35px;
+			background-color: transparent;
+			padding-top: 2px;
+		}
+	}
+}
+
+ @media (max-width: 767px) {
+ 	.header{
+	 	.navbar-main{
+	 		.navbar-nav{
+		 		margin-left: 0;
+		 		margin-right: 0;
+	 		}
+	 		.nav{
+	 			li{
+	 				a{
+					    color: $black_3;
+	 				}
+	 			}
+	 		}
+	 		&.navbar_c1{
+		    	background: $white;
+		    	.navbar-brand{
+	    		    float: left;
+	    			position: static;
+		    	}
+	 		}
+		}
+		&.header-1{
+			
+		}
+		&.header-2{
+			.navbar-main{
+		    	background: $white;
+			}
+		}
+		&.header-3{
+			.navbar-main{
+		    	background: $white;
+	    	 	> .container-nav {
+			    	background: $white;
+				}
+		    	.navbar-brand{
+	    		    float: left;
+	    			position: static;
+		    	}
+			}
+		}
+		&.header-4{
+			.navbar-main{
+		    	background: $white;
+		    	.navbar-brand{
+	    		    float: left;
+	    			position: static;
+		    	}
+			}
+		}
+		&.header-5{
+			.navbar-main{
+		    	background: $white;
+		    	.navbar-brand{
+	    		    float: left;
+	    			position: static;
+		    	}
+			}
+		}
+ 	}
+	.topbar-info{
+		display: none;
+	}
+}

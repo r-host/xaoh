@@ -1,0 +1,32 @@
+$font_1 : 'Raleway', sans-serif;
+$font_2 : 'Open Sans', sans-serif;
+$font_landing : 'Raleway', sans-serif;
+$font_icon: FontAwesome;
+
+$black_1: #000000;
+$black_2: #333333;
+$black_3: #666666; // body
+$red: #FF0000;
+$white: #ffffff;
+
+// Global
+$color_1: #111;
+//$color_2: lighten($black_2, 5%);
+$color_2: #999;
+$color_3: $red;
+
+
+// Fonts
+$font__body-color: $black_3;
+$font__topbar-color: $black_2;
+$font__topbar-nav-color: $black_2;
+$font__topbar-nav-hover-color: $color_2;
+$font__navbar-color: $black_2;
+$font__navbar-hover-color: $color_2;
+
+
+.bolder{
+	font-weight: 600;
+}
+
+@import "mixin.scss";

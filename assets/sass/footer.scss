@@ -1,0 +1,72 @@
+.footer{
+	background: #111;
+    color: #999;
+    padding: 80px 0px;
+    text-align: center;
+    font-family: $font_2;
+    .widget {
+	    margin-bottom: 20px;
+	}
+    .footer-widget{
+	  margin-right: -25px;
+	  margin-left: -25px;
+	  display: flex;
+	  margin-bottom: 20px;
+	}
+	.footer-widget > [class^="col-"],
+	.footer-widget > [class*=" col-"],
+	.footer-widget[class*='col-'],
+	.footer-widget[class*=" col-"]{
+	  padding-right: 25px;
+	  padding-left: 25px;
+	  border-right: 1px solid #2b2b2b;
+	  &:last-child{
+  		border-right-color: transparent;
+	  }
+	}
+	.logo-footer{
+		text-align: center;
+		padding: 20px 0;
+	}
+	.tagline{
+		margin-top: 15px;
+	    color: #666666;
+    	letter-spacing: 8px;
+	}
+	.social-icon-footer{
+		a{
+			font-size: 18px;
+			color: #ccc;
+			&:hover{
+				color: darken(#ccc, 10%);
+			}
+		}
+		> li{
+		    padding-right: 15px;
+		    padding-left: 15px;
+		}
+	}
+    .fcopy{
+    	font-family: $font_1;
+	    letter-spacing: 3px;
+    	font-size: 10px;
+    }
+    @media (max-width: 767px) {
+		.footer-widget{
+			display: initial;
+		}
+    }
+}
+.landing{
+	.footer{
+		background: #222;
+		padding: 60px 0px;
+	}
+	.fcopy{
+    	font-size: 12px;
+    	font-family: $font_1;
+    	color: #ababab;
+	    letter-spacing: 3px;
+    	font-size: 10px;
+    }
+}
