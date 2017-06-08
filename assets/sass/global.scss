@@ -860,6 +860,20 @@ pre {
 		margin-bottom: 20px;
 	}
 }
+.work-info{
+	.item{
+		margin-bottom: 10px;
+		.meta{
+			font-weight: 700;
+			display: inline-block;
+		    min-width: 85px;
+		}
+		.info{
+			display: inline-block;
+		}
+		@include clearfix();
+	}
+}
 #testimonial{
 	.owl-controls {
 	    text-align: left;
@@ -946,3 +960,4 @@ textarea.form-control{
 	    margin-bottom: 30px;
 	}
 }
+

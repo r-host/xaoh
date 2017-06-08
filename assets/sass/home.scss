@@ -63,7 +63,7 @@
   padding-top: 20px;
   text-align: center;
   &:hover {
-    color: $color_3;
+    color: $color_1;
     border-color: $color_2;
     text-decoration: none;
   }
@@ -102,20 +102,18 @@
 	}
   .sub-caption-heading{
     font-size: 15px;
-    font-family: $font_1;
     letter-spacing: 2px;
   }
   .caption-heading{
     line-height: 1.2em;
     color: $black_3;
     font-size: 48px;
-    font-family: $font_2;
     font-weight: 700;
   }
 	.excerpt{
 		margin-bottom: 50px;
-	 	font-size: 15px;
-    font-family: $font_1;
+	 	font-size: 18px;
+    letter-spacing: 5px;
 	}
 	.btn{
 		margin-right: 15px;

@@ -1033,6 +1033,19 @@ pre {
 .info-detail dd {
   margin-bottom: 20px; }
 
+.work-info .item {
+  margin-bottom: 10px; }
+  .work-info .item .meta {
+    font-weight: 700;
+    display: inline-block;
+    min-width: 85px; }
+  .work-info .item .info {
+    display: inline-block; }
+  .work-info .item::after {
+    display: block;
+    content: "";
+    clear: both; }
+
 #testimonial .owl-controls {
   text-align: left;
   margin-top: 40px; }
@@ -1253,8 +1266,9 @@ textarea.form-control {
 :focus {
   outline: none; }
 
-.btni, .btn, .btn-cta, .btn-primary.disabled,
-.btn-primary, .btn-secondary, .landing .title-section-landing h4, .landing .title-section-landing .lead, .landing .title-section-landing .team-1 .title, .team-1 .landing .title-section-landing .title, .landing .title-section-landing .team-2 .title, .team-2 .landing .title-section-landing .title, .landing .title-section-landing .recent-blog .item .title, .recent-blog .item .landing .title-section-landing .title, .landing .title-section-landing .related .title-heading, .related .landing .title-section-landing .title-heading,
+.btni, .btn, .btn-cta, .btn-primary.disabled, .portfolio_filter li a.disabled,
+.btn-primary,
+.portfolio_filter li a, .btn-secondary, .landing .title-section-landing h4, .landing .title-section-landing .lead, .landing .title-section-landing .team-1 .title, .team-1 .landing .title-section-landing .title, .landing .title-section-landing .team-2 .title, .team-2 .landing .title-section-landing .title, .landing .title-section-landing .recent-blog .item .title, .recent-blog .item .landing .title-section-landing .title, .landing .title-section-landing .related .title-heading, .related .landing .title-section-landing .title-heading,
 .landing .title-section-landing .comments-box .title-heading,
 .comments-box .landing .title-section-landing .title-heading,
 .landing .title-section-landing .leave-comment-box .title-heading,
@@ -1266,8 +1280,9 @@ textarea.form-control {
   padding: 10px 35px;
   font-weight: 700; }
 
-.btn, .btn-cta, .btn-primary.disabled,
-.btn-primary, .btn-secondary, .landing .title-section-landing h4, .landing .title-section-landing .lead, .landing .title-section-landing .team-1 .title, .team-1 .landing .title-section-landing .title, .landing .title-section-landing .team-2 .title, .team-2 .landing .title-section-landing .title, .landing .title-section-landing .recent-blog .item .title, .recent-blog .item .landing .title-section-landing .title, .landing .title-section-landing .related .title-heading, .related .landing .title-section-landing .title-heading,
+.btn, .btn-cta, .btn-primary.disabled, .portfolio_filter li a.disabled,
+.btn-primary,
+.portfolio_filter li a, .btn-secondary, .landing .title-section-landing h4, .landing .title-section-landing .lead, .landing .title-section-landing .team-1 .title, .team-1 .landing .title-section-landing .title, .landing .title-section-landing .team-2 .title, .team-2 .landing .title-section-landing .title, .landing .title-section-landing .recent-blog .item .title, .recent-blog .item .landing .title-section-landing .title, .landing .title-section-landing .related .title-heading, .related .landing .title-section-landing .title-heading,
 .landing .title-section-landing .comments-box .title-heading,
 .comments-box .landing .title-section-landing .title-heading,
 .landing .title-section-landing .leave-comment-box .title-heading,
@@ -1306,15 +1321,20 @@ textarea.form-control {
   background-color: #111;
   color: #ffffff; }
 
-.btn-primary.disabled,
-.btn-primary {
+.btn-primary.disabled, .portfolio_filter li a.disabled,
+.btn-primary,
+.portfolio_filter li a {
   background-color: #111;
   border: 1px solid #111; }
-  .btn-primary.disabled:hover,
-  .btn-primary:hover {
+  .btn-primary.disabled.active, .portfolio_filter li a.disabled.active, .btn-primary.disabled:hover, .portfolio_filter li a.disabled:hover,
+  .btn-primary.active,
+  .portfolio_filter li a.active,
+  .btn-primary:hover,
+  .portfolio_filter li a:hover {
     background-color: transparent;
     color: #111;
-    border-color: #111; }
+    border-color: #111;
+    text-decoration: none; }
 
 .btn-secondary, .landing .title-section-landing h4, .landing .title-section-landing .lead, .landing .title-section-landing .team-1 .title, .team-1 .landing .title-section-landing .title, .landing .title-section-landing .team-2 .title, .team-2 .landing .title-section-landing .title, .landing .title-section-landing .recent-blog .item .title, .recent-blog .item .landing .title-section-landing .title, .landing .title-section-landing .related .title-heading, .related .landing .title-section-landing .title-heading,
 .landing .title-section-landing .comments-box .title-heading,
@@ -1375,7 +1395,8 @@ textarea.form-control {
   font-family: "Raleway", sans-serif; }
 
 .btn-group-sm > .btn, .btn-group-sm > .btn-cta,
-.btn-group-sm > .btn-primary, .btn-group-sm > .btn-secondary, .landing .title-section-landing .btn-group-sm > h4, .landing .title-section-landing .btn-group-sm > .lead, .landing .title-section-landing .team-1 .btn-group-sm > .title, .team-1 .landing .title-section-landing .btn-group-sm > .title, .landing .title-section-landing .team-2 .btn-group-sm > .title, .team-2 .landing .title-section-landing .btn-group-sm > .title, .landing .title-section-landing .recent-blog .item .btn-group-sm > .title, .recent-blog .item .landing .title-section-landing .btn-group-sm > .title, .landing .title-section-landing .related .btn-group-sm > .title-heading, .related .landing .title-section-landing .btn-group-sm > .title-heading,
+.btn-group-sm > .btn-primary,
+.portfolio_filter li .btn-group-sm > a, .btn-group-sm > .btn-secondary, .landing .title-section-landing .btn-group-sm > h4, .landing .title-section-landing .btn-group-sm > .lead, .landing .title-section-landing .team-1 .btn-group-sm > .title, .team-1 .landing .title-section-landing .btn-group-sm > .title, .landing .title-section-landing .team-2 .btn-group-sm > .title, .team-2 .landing .title-section-landing .btn-group-sm > .title, .landing .title-section-landing .recent-blog .item .btn-group-sm > .title, .recent-blog .item .landing .title-section-landing .btn-group-sm > .title, .landing .title-section-landing .related .btn-group-sm > .title-heading, .related .landing .title-section-landing .btn-group-sm > .title-heading,
 .landing .title-section-landing .comments-box .btn-group-sm > .title-heading,
 .comments-box .landing .title-section-landing .btn-group-sm > .title-heading,
 .landing .title-section-landing .leave-comment-box .btn-group-sm > .title-heading,
@@ -1385,7 +1406,8 @@ textarea.form-control {
   font-family: "Raleway", sans-serif; }
 
 .btn-group-xs > .btn, .btn-group-xs > .btn-cta,
-.btn-group-xs > .btn-primary, .btn-group-xs > .btn-secondary, .landing .title-section-landing .btn-group-xs > h4, .landing .title-section-landing .btn-group-xs > .lead, .landing .title-section-landing .team-1 .btn-group-xs > .title, .team-1 .landing .title-section-landing .btn-group-xs > .title, .landing .title-section-landing .team-2 .btn-group-xs > .title, .team-2 .landing .title-section-landing .btn-group-xs > .title, .landing .title-section-landing .recent-blog .item .btn-group-xs > .title, .recent-blog .item .landing .title-section-landing .btn-group-xs > .title, .landing .title-section-landing .related .btn-group-xs > .title-heading, .related .landing .title-section-landing .btn-group-xs > .title-heading,
+.btn-group-xs > .btn-primary,
+.portfolio_filter li .btn-group-xs > a, .btn-group-xs > .btn-secondary, .landing .title-section-landing .btn-group-xs > h4, .landing .title-section-landing .btn-group-xs > .lead, .landing .title-section-landing .team-1 .btn-group-xs > .title, .team-1 .landing .title-section-landing .btn-group-xs > .title, .landing .title-section-landing .team-2 .btn-group-xs > .title, .team-2 .landing .title-section-landing .btn-group-xs > .title, .landing .title-section-landing .recent-blog .item .btn-group-xs > .title, .recent-blog .item .landing .title-section-landing .btn-group-xs > .title, .landing .title-section-landing .related .btn-group-xs > .title-heading, .related .landing .title-section-landing .btn-group-xs > .title-heading,
 .landing .title-section-landing .comments-box .btn-group-xs > .title-heading,
 .comments-box .landing .title-section-landing .btn-group-xs > .title-heading,
 .landing .title-section-landing .leave-comment-box .btn-group-xs > .title-heading,
@@ -1440,6 +1462,21 @@ textarea.form-control {
     .pager li a:hover, .pager li span:hover {
       background-color: #000;
       color: #ffffff; }
+
+.pager-2 li a,
+.pager-2 li span {
+  width: 37px;
+  height: 37px;
+  padding: 7px 14px;
+  background-color: #111;
+  color: #ffffff; }
+  .pager-2 li a .fa,
+  .pager-2 li span .fa {
+    font-size: 20px; }
+  .pager-2 li a:hover,
+  .pager-2 li span:hover {
+    background-color: #ffffff;
+    color: #111; }
 
 .btn-sidebar {
   border-radius: 0;
@@ -1632,7 +1669,9 @@ textarea.form-control {
     box-shadow: 0 2px 5px 3px #eef0f6;
     padding: 15px 20px 20px; }
     .box-image-1 .media .btn, .box-image-1 .media .btn-cta,
-    .box-image-1 .media .btn-primary, .box-image-1 .media .btn-secondary, .box-image-1 .media .landing .title-section-landing h4, .landing .title-section-landing .box-image-1 .media h4, .box-image-1 .media .landing .title-section-landing .lead, .landing .title-section-landing .box-image-1 .media .lead, .box-image-1 .media .landing .title-section-landing .team-1 .title, .landing .title-section-landing .team-1 .box-image-1 .media .title, .box-image-1 .media .team-1 .landing .title-section-landing .title, .team-1 .landing .title-section-landing .box-image-1 .media .title, .box-image-1 .media .landing .title-section-landing .team-2 .title, .landing .title-section-landing .team-2 .box-image-1 .media .title, .box-image-1 .media .team-2 .landing .title-section-landing .title, .team-2 .landing .title-section-landing .box-image-1 .media .title, .box-image-1 .media .landing .title-section-landing .recent-blog .item .title, .landing .title-section-landing .recent-blog .item .box-image-1 .media .title, .box-image-1 .media .recent-blog .item .landing .title-section-landing .title, .recent-blog .item .landing .title-section-landing .box-image-1 .media .title, .box-image-1 .media .landing .title-section-landing .related .title-heading, .landing .title-section-landing .related .box-image-1 .media .title-heading, .box-image-1 .media .related .landing .title-section-landing .title-heading, .related .landing .title-section-landing .box-image-1 .media .title-heading,
+    .box-image-1 .media .btn-primary,
+    .box-image-1 .media .portfolio_filter li a,
+    .portfolio_filter li .box-image-1 .media a, .box-image-1 .media .btn-secondary, .box-image-1 .media .landing .title-section-landing h4, .landing .title-section-landing .box-image-1 .media h4, .box-image-1 .media .landing .title-section-landing .lead, .landing .title-section-landing .box-image-1 .media .lead, .box-image-1 .media .landing .title-section-landing .team-1 .title, .landing .title-section-landing .team-1 .box-image-1 .media .title, .box-image-1 .media .team-1 .landing .title-section-landing .title, .team-1 .landing .title-section-landing .box-image-1 .media .title, .box-image-1 .media .landing .title-section-landing .team-2 .title, .landing .title-section-landing .team-2 .box-image-1 .media .title, .box-image-1 .media .team-2 .landing .title-section-landing .title, .team-2 .landing .title-section-landing .box-image-1 .media .title, .box-image-1 .media .landing .title-section-landing .recent-blog .item .title, .landing .title-section-landing .recent-blog .item .box-image-1 .media .title, .box-image-1 .media .recent-blog .item .landing .title-section-landing .title, .recent-blog .item .landing .title-section-landing .box-image-1 .media .title, .box-image-1 .media .landing .title-section-landing .related .title-heading, .landing .title-section-landing .related .box-image-1 .media .title-heading, .box-image-1 .media .related .landing .title-section-landing .title-heading, .related .landing .title-section-landing .box-image-1 .media .title-heading,
     .box-image-1 .media .landing .title-section-landing .comments-box .title-heading,
     .landing .title-section-landing .comments-box .box-image-1 .media .title-heading,
     .box-image-1 .media .comments-box .landing .title-section-landing .title-heading,
@@ -1665,7 +1704,9 @@ textarea.form-control {
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
       filter: alpha(opacity=30); }
   .box-image-1:hover .btn, .box-image-1:hover .btn-cta,
-  .box-image-1:hover .btn-primary, .box-image-1:hover .btn-secondary, .box-image-1:hover .landing .title-section-landing h4, .landing .title-section-landing .box-image-1:hover h4, .box-image-1:hover .landing .title-section-landing .lead, .landing .title-section-landing .box-image-1:hover .lead, .box-image-1:hover .landing .title-section-landing .team-1 .title, .landing .title-section-landing .team-1 .box-image-1:hover .title, .box-image-1:hover .team-1 .landing .title-section-landing .title, .team-1 .landing .title-section-landing .box-image-1:hover .title, .box-image-1:hover .landing .title-section-landing .team-2 .title, .landing .title-section-landing .team-2 .box-image-1:hover .title, .box-image-1:hover .team-2 .landing .title-section-landing .title, .team-2 .landing .title-section-landing .box-image-1:hover .title, .box-image-1:hover .landing .title-section-landing .recent-blog .item .title, .landing .title-section-landing .recent-blog .item .box-image-1:hover .title, .box-image-1:hover .recent-blog .item .landing .title-section-landing .title, .recent-blog .item .landing .title-section-landing .box-image-1:hover .title, .box-image-1:hover .landing .title-section-landing .related .title-heading, .landing .title-section-landing .related .box-image-1:hover .title-heading, .box-image-1:hover .related .landing .title-section-landing .title-heading, .related .landing .title-section-landing .box-image-1:hover .title-heading,
+  .box-image-1:hover .btn-primary,
+  .box-image-1:hover .portfolio_filter li a,
+  .portfolio_filter li .box-image-1:hover a, .box-image-1:hover .btn-secondary, .box-image-1:hover .landing .title-section-landing h4, .landing .title-section-landing .box-image-1:hover h4, .box-image-1:hover .landing .title-section-landing .lead, .landing .title-section-landing .box-image-1:hover .lead, .box-image-1:hover .landing .title-section-landing .team-1 .title, .landing .title-section-landing .team-1 .box-image-1:hover .title, .box-image-1:hover .team-1 .landing .title-section-landing .title, .team-1 .landing .title-section-landing .box-image-1:hover .title, .box-image-1:hover .landing .title-section-landing .team-2 .title, .landing .title-section-landing .team-2 .box-image-1:hover .title, .box-image-1:hover .team-2 .landing .title-section-landing .title, .team-2 .landing .title-section-landing .box-image-1:hover .title, .box-image-1:hover .landing .title-section-landing .recent-blog .item .title, .landing .title-section-landing .recent-blog .item .box-image-1:hover .title, .box-image-1:hover .recent-blog .item .landing .title-section-landing .title, .recent-blog .item .landing .title-section-landing .box-image-1:hover .title, .box-image-1:hover .landing .title-section-landing .related .title-heading, .landing .title-section-landing .related .box-image-1:hover .title-heading, .box-image-1:hover .related .landing .title-section-landing .title-heading, .related .landing .title-section-landing .box-image-1:hover .title-heading,
   .box-image-1:hover .landing .title-section-landing .comments-box .title-heading,
   .landing .title-section-landing .comments-box .box-image-1:hover .title-heading,
   .box-image-1:hover .comments-box .landing .title-section-landing .title-heading,
@@ -1712,68 +1753,35 @@ textarea.form-control {
   .box-image-2:hover .body .title {
     color: #FF0000; }
 
-/* 2.5. BOX IMAGE 3 **/
+/* 2.5. BOX IMAGE 3 */
 .box-image-3 {
-  position: relative;
-  background-color: #f5f5f5;
-  color: #666666;
-  margin-bottom: 30px; }
-  .box-image-3 .media {
-    width: 100%;
-    margin-bottom: 5px;
-    position: relative;
-    background-color: #666666;
-    overflow: hidden; }
-    .box-image-3 .media .action-btn {
+  position: relative; }
+  .box-image-3 .image {
+    overflow: hidden;
+    background-color: #111;
+    position: relative; }
+    .box-image-3 .image:before {
+      content: '';
       position: absolute;
-      top: 50%;
+      background: url(../images/link.gif) center top no-repeat;
+      top: 40%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      width: 100%;
+      width: 50px;
+      height: 50px;
       text-align: center;
-      z-index: 2;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-      .box-image-3 .media .action-btn .btn, .box-image-3 .media .action-btn .btn-cta,
-      .box-image-3 .media .action-btn .btn-primary, .box-image-3 .media .action-btn .btn-secondary, .box-image-3 .media .action-btn .landing .title-section-landing h4, .landing .title-section-landing .box-image-3 .media .action-btn h4, .box-image-3 .media .action-btn .landing .title-section-landing .lead, .landing .title-section-landing .box-image-3 .media .action-btn .lead, .box-image-3 .media .action-btn .landing .title-section-landing .team-1 .title, .landing .title-section-landing .team-1 .box-image-3 .media .action-btn .title, .box-image-3 .media .action-btn .team-1 .landing .title-section-landing .title, .team-1 .landing .title-section-landing .box-image-3 .media .action-btn .title, .box-image-3 .media .action-btn .landing .title-section-landing .team-2 .title, .landing .title-section-landing .team-2 .box-image-3 .media .action-btn .title, .box-image-3 .media .action-btn .team-2 .landing .title-section-landing .title, .team-2 .landing .title-section-landing .box-image-3 .media .action-btn .title, .box-image-3 .media .action-btn .landing .title-section-landing .recent-blog .item .title, .landing .title-section-landing .recent-blog .item .box-image-3 .media .action-btn .title, .box-image-3 .media .action-btn .recent-blog .item .landing .title-section-landing .title, .recent-blog .item .landing .title-section-landing .box-image-3 .media .action-btn .title, .box-image-3 .media .action-btn .landing .title-section-landing .related .title-heading, .landing .title-section-landing .related .box-image-3 .media .action-btn .title-heading, .box-image-3 .media .action-btn .related .landing .title-section-landing .title-heading, .related .landing .title-section-landing .box-image-3 .media .action-btn .title-heading,
-      .box-image-3 .media .action-btn .landing .title-section-landing .comments-box .title-heading,
-      .landing .title-section-landing .comments-box .box-image-3 .media .action-btn .title-heading,
-      .box-image-3 .media .action-btn .comments-box .landing .title-section-landing .title-heading,
-      .comments-box .landing .title-section-landing .box-image-3 .media .action-btn .title-heading,
-      .box-image-3 .media .action-btn .landing .title-section-landing .leave-comment-box .title-heading,
-      .landing .title-section-landing .leave-comment-box .box-image-3 .media .action-btn .title-heading,
-      .box-image-3 .media .action-btn .leave-comment-box .landing .title-section-landing .title-heading,
-      .leave-comment-box .landing .title-section-landing .box-image-3 .media .action-btn .title-heading, .box-image-3 .media .action-btn .btn-white {
-        -webkit-transform: scale3d(0, 0, 0);
-        transform: scale3d(0, 0, 0);
-        -webkit-transition: all 400ms;
-        transition: all 400ms;
-        opacity: 0;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-        filter: alpha(opacity=0);
-        padding: 6px 20px;
-        font-family: "Raleway", sans-serif;
-        color: #ffffff;
-        background-color: transparent;
-        border: 1px solid #ffffff; }
-        .box-image-3 .media .action-btn .btn:hover, .box-image-3 .media .action-btn .btn-cta:hover,
-        .box-image-3 .media .action-btn .btn-primary:hover, .box-image-3 .media .action-btn .btn-secondary:hover, .box-image-3 .media .action-btn .landing .title-section-landing h4:hover, .landing .title-section-landing .box-image-3 .media .action-btn h4:hover, .box-image-3 .media .action-btn .landing .title-section-landing .lead:hover, .landing .title-section-landing .box-image-3 .media .action-btn .lead:hover, .box-image-3 .media .action-btn .landing .title-section-landing .team-1 .title:hover, .landing .title-section-landing .team-1 .box-image-3 .media .action-btn .title:hover, .box-image-3 .media .action-btn .team-1 .landing .title-section-landing .title:hover, .team-1 .landing .title-section-landing .box-image-3 .media .action-btn .title:hover, .box-image-3 .media .action-btn .landing .title-section-landing .team-2 .title:hover, .landing .title-section-landing .team-2 .box-image-3 .media .action-btn .title:hover, .box-image-3 .media .action-btn .team-2 .landing .title-section-landing .title:hover, .team-2 .landing .title-section-landing .box-image-3 .media .action-btn .title:hover, .box-image-3 .media .action-btn .landing .title-section-landing .recent-blog .item .title:hover, .landing .title-section-landing .recent-blog .item .box-image-3 .media .action-btn .title:hover, .box-image-3 .media .action-btn .recent-blog .item .landing .title-section-landing .title:hover, .recent-blog .item .landing .title-section-landing .box-image-3 .media .action-btn .title:hover, .box-image-3 .media .action-btn .landing .title-section-landing .related .title-heading:hover, .landing .title-section-landing .related .box-image-3 .media .action-btn .title-heading:hover, .box-image-3 .media .action-btn .related .landing .title-section-landing .title-heading:hover, .related .landing .title-section-landing .box-image-3 .media .action-btn .title-heading:hover,
-        .box-image-3 .media .action-btn .landing .title-section-landing .comments-box .title-heading:hover,
-        .landing .title-section-landing .comments-box .box-image-3 .media .action-btn .title-heading:hover,
-        .box-image-3 .media .action-btn .comments-box .landing .title-section-landing .title-heading:hover,
-        .comments-box .landing .title-section-landing .box-image-3 .media .action-btn .title-heading:hover,
-        .box-image-3 .media .action-btn .landing .title-section-landing .leave-comment-box .title-heading:hover,
-        .landing .title-section-landing .leave-comment-box .box-image-3 .media .action-btn .title-heading:hover,
-        .box-image-3 .media .action-btn .leave-comment-box .landing .title-section-landing .title-heading:hover,
-        .leave-comment-box .landing .title-section-landing .box-image-3 .media .action-btn .title-heading:hover, .box-image-3 .media .action-btn .btn-white:hover {
-          background-color: #666666;
-          border: 1px solid #666666; }
-    .box-image-3 .media img {
+      z-index: 9;
+      color: #ffffff;
+      font-size: 30px;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      -webkit-transition: all ease .25s;
+      transition: all ease .25s; }
+    .box-image-3 .image img {
+      opacity: 1;
+      max-width: 100%;
       -webkit-transform: scale(1, 1);
       -ms-transform: scale(1, 1);
       transform: scale(1, 1);
@@ -1783,55 +1791,27 @@ textarea.form-control {
       transition-duration: 250ms;
       -webkit-transition: 0.1s all linear;
       transition: 0.1s all linear; }
-  .box-image-3 .body {
-    position: relative;
+  .box-image-3:hover .image img {
+    opacity: .2;
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms; }
+  .box-image-3:hover .image:before {
+    top: 50%;
+    filter: alpha(opacity=1);
+    opacity: 100; }
+  .box-image-3 .blok-title {
     text-align: center;
-    padding: 5px 40px 30px; }
-    .box-image-3 .body .title {
-      color: #000;
-      font-size: 18px;
-      font-family: "Open Sans", sans-serif;
-      font-weight: 700;
-      margin-bottom: 0; }
-      .box-image-3 .body .title a {
-        color: #000; }
-    .box-image-3 .body .category {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px; }
-  .box-image-3:hover {
-    background-color: #FF0000;
-    color: #ffffff; }
-    .box-image-3:hover .media img {
-      opacity: 0.3;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-      filter: alpha(opacity=30);
-      -webkit-transform: scale(1.1, 1.1);
-      -ms-transform: scale(1.1, 1.1);
-      transform: scale(1.1, 1.1);
-      -webkit-transition-timing-function: ease-out;
-      transition-timing-function: ease-out;
-      -webkit-transition-duration: 250ms;
-      transition-duration: 250ms; }
-    .box-image-3:hover .media .btn, .box-image-3:hover .media .btn-cta,
-    .box-image-3:hover .media .btn-primary, .box-image-3:hover .media .btn-secondary, .box-image-3:hover .media .landing .title-section-landing h4, .landing .title-section-landing .box-image-3:hover .media h4, .box-image-3:hover .media .landing .title-section-landing .lead, .landing .title-section-landing .box-image-3:hover .media .lead, .box-image-3:hover .media .landing .title-section-landing .team-1 .title, .landing .title-section-landing .team-1 .box-image-3:hover .media .title, .box-image-3:hover .media .team-1 .landing .title-section-landing .title, .team-1 .landing .title-section-landing .box-image-3:hover .media .title, .box-image-3:hover .media .landing .title-section-landing .team-2 .title, .landing .title-section-landing .team-2 .box-image-3:hover .media .title, .box-image-3:hover .media .team-2 .landing .title-section-landing .title, .team-2 .landing .title-section-landing .box-image-3:hover .media .title, .box-image-3:hover .media .landing .title-section-landing .recent-blog .item .title, .landing .title-section-landing .recent-blog .item .box-image-3:hover .media .title, .box-image-3:hover .media .recent-blog .item .landing .title-section-landing .title, .recent-blog .item .landing .title-section-landing .box-image-3:hover .media .title, .box-image-3:hover .media .landing .title-section-landing .related .title-heading, .landing .title-section-landing .related .box-image-3:hover .media .title-heading, .box-image-3:hover .media .related .landing .title-section-landing .title-heading, .related .landing .title-section-landing .box-image-3:hover .media .title-heading,
-    .box-image-3:hover .media .landing .title-section-landing .comments-box .title-heading,
-    .landing .title-section-landing .comments-box .box-image-3:hover .media .title-heading,
-    .box-image-3:hover .media .comments-box .landing .title-section-landing .title-heading,
-    .comments-box .landing .title-section-landing .box-image-3:hover .media .title-heading,
-    .box-image-3:hover .media .landing .title-section-landing .leave-comment-box .title-heading,
-    .landing .title-section-landing .leave-comment-box .box-image-3:hover .media .title-heading,
-    .box-image-3:hover .media .leave-comment-box .landing .title-section-landing .title-heading,
-    .leave-comment-box .landing .title-section-landing .box-image-3:hover .media .title-heading, .box-image-3:hover .media .btn-white {
-      opacity: 1;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-      filter: alpha(opacity=100);
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1); }
-    .box-image-3:hover .body .title {
-      color: #ffffff; }
-      .box-image-3:hover .body .title a {
-        color: #ffffff; }
+    color: #000000;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .box-image-3:hover .blok-title {
+    color: #999; }
 
 /* 2.5. BOX IMAGE 4 **/
 .box-image-4 {
@@ -1863,7 +1843,9 @@ textarea.form-control {
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
       .box-image-4 .media .action-btn .btn, .box-image-4 .media .action-btn .btn-cta,
-      .box-image-4 .media .action-btn .btn-primary, .box-image-4 .media .action-btn .btn-secondary, .box-image-4 .media .action-btn .landing .title-section-landing h4, .landing .title-section-landing .box-image-4 .media .action-btn h4, .box-image-4 .media .action-btn .landing .title-section-landing .lead, .landing .title-section-landing .box-image-4 .media .action-btn .lead, .box-image-4 .media .action-btn .landing .title-section-landing .team-1 .title, .landing .title-section-landing .team-1 .box-image-4 .media .action-btn .title, .box-image-4 .media .action-btn .team-1 .landing .title-section-landing .title, .team-1 .landing .title-section-landing .box-image-4 .media .action-btn .title, .box-image-4 .media .action-btn .landing .title-section-landing .team-2 .title, .landing .title-section-landing .team-2 .box-image-4 .media .action-btn .title, .box-image-4 .media .action-btn .team-2 .landing .title-section-landing .title, .team-2 .landing .title-section-landing .box-image-4 .media .action-btn .title, .box-image-4 .media .action-btn .landing .title-section-landing .recent-blog .item .title, .landing .title-section-landing .recent-blog .item .box-image-4 .media .action-btn .title, .box-image-4 .media .action-btn .recent-blog .item .landing .title-section-landing .title, .recent-blog .item .landing .title-section-landing .box-image-4 .media .action-btn .title, .box-image-4 .media .action-btn .landing .title-section-landing .related .title-heading, .landing .title-section-landing .related .box-image-4 .media .action-btn .title-heading, .box-image-4 .media .action-btn .related .landing .title-section-landing .title-heading, .related .landing .title-section-landing .box-image-4 .media .action-btn .title-heading,
+      .box-image-4 .media .action-btn .btn-primary,
+      .box-image-4 .media .action-btn .portfolio_filter li a,
+      .portfolio_filter li .box-image-4 .media .action-btn a, .box-image-4 .media .action-btn .btn-secondary, .box-image-4 .media .action-btn .landing .title-section-landing h4, .landing .title-section-landing .box-image-4 .media .action-btn h4, .box-image-4 .media .action-btn .landing .title-section-landing .lead, .landing .title-section-landing .box-image-4 .media .action-btn .lead, .box-image-4 .media .action-btn .landing .title-section-landing .team-1 .title, .landing .title-section-landing .team-1 .box-image-4 .media .action-btn .title, .box-image-4 .media .action-btn .team-1 .landing .title-section-landing .title, .team-1 .landing .title-section-landing .box-image-4 .media .action-btn .title, .box-image-4 .media .action-btn .landing .title-section-landing .team-2 .title, .landing .title-section-landing .team-2 .box-image-4 .media .action-btn .title, .box-image-4 .media .action-btn .team-2 .landing .title-section-landing .title, .team-2 .landing .title-section-landing .box-image-4 .media .action-btn .title, .box-image-4 .media .action-btn .landing .title-section-landing .recent-blog .item .title, .landing .title-section-landing .recent-blog .item .box-image-4 .media .action-btn .title, .box-image-4 .media .action-btn .recent-blog .item .landing .title-section-landing .title, .recent-blog .item .landing .title-section-landing .box-image-4 .media .action-btn .title, .box-image-4 .media .action-btn .landing .title-section-landing .related .title-heading, .landing .title-section-landing .related .box-image-4 .media .action-btn .title-heading, .box-image-4 .media .action-btn .related .landing .title-section-landing .title-heading, .related .landing .title-section-landing .box-image-4 .media .action-btn .title-heading,
       .box-image-4 .media .action-btn .landing .title-section-landing .comments-box .title-heading,
       .landing .title-section-landing .comments-box .box-image-4 .media .action-btn .title-heading,
       .box-image-4 .media .action-btn .comments-box .landing .title-section-landing .title-heading,
@@ -1880,12 +1862,13 @@ textarea.form-control {
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
         filter: alpha(opacity=0);
         padding: 6px 20px;
-        font-family: "Raleway", sans-serif;
         color: #ffffff;
         background-color: transparent;
         border: 1px solid #ffffff; }
         .box-image-4 .media .action-btn .btn:hover, .box-image-4 .media .action-btn .btn-cta:hover,
-        .box-image-4 .media .action-btn .btn-primary:hover, .box-image-4 .media .action-btn .btn-secondary:hover, .box-image-4 .media .action-btn .landing .title-section-landing h4:hover, .landing .title-section-landing .box-image-4 .media .action-btn h4:hover, .box-image-4 .media .action-btn .landing .title-section-landing .lead:hover, .landing .title-section-landing .box-image-4 .media .action-btn .lead:hover, .box-image-4 .media .action-btn .landing .title-section-landing .team-1 .title:hover, .landing .title-section-landing .team-1 .box-image-4 .media .action-btn .title:hover, .box-image-4 .media .action-btn .team-1 .landing .title-section-landing .title:hover, .team-1 .landing .title-section-landing .box-image-4 .media .action-btn .title:hover, .box-image-4 .media .action-btn .landing .title-section-landing .team-2 .title:hover, .landing .title-section-landing .team-2 .box-image-4 .media .action-btn .title:hover, .box-image-4 .media .action-btn .team-2 .landing .title-section-landing .title:hover, .team-2 .landing .title-section-landing .box-image-4 .media .action-btn .title:hover, .box-image-4 .media .action-btn .landing .title-section-landing .recent-blog .item .title:hover, .landing .title-section-landing .recent-blog .item .box-image-4 .media .action-btn .title:hover, .box-image-4 .media .action-btn .recent-blog .item .landing .title-section-landing .title:hover, .recent-blog .item .landing .title-section-landing .box-image-4 .media .action-btn .title:hover, .box-image-4 .media .action-btn .landing .title-section-landing .related .title-heading:hover, .landing .title-section-landing .related .box-image-4 .media .action-btn .title-heading:hover, .box-image-4 .media .action-btn .related .landing .title-section-landing .title-heading:hover, .related .landing .title-section-landing .box-image-4 .media .action-btn .title-heading:hover,
+        .box-image-4 .media .action-btn .btn-primary:hover,
+        .box-image-4 .media .action-btn .portfolio_filter li a:hover,
+        .portfolio_filter li .box-image-4 .media .action-btn a:hover, .box-image-4 .media .action-btn .btn-secondary:hover, .box-image-4 .media .action-btn .landing .title-section-landing h4:hover, .landing .title-section-landing .box-image-4 .media .action-btn h4:hover, .box-image-4 .media .action-btn .landing .title-section-landing .lead:hover, .landing .title-section-landing .box-image-4 .media .action-btn .lead:hover, .box-image-4 .media .action-btn .landing .title-section-landing .team-1 .title:hover, .landing .title-section-landing .team-1 .box-image-4 .media .action-btn .title:hover, .box-image-4 .media .action-btn .team-1 .landing .title-section-landing .title:hover, .team-1 .landing .title-section-landing .box-image-4 .media .action-btn .title:hover, .box-image-4 .media .action-btn .landing .title-section-landing .team-2 .title:hover, .landing .title-section-landing .team-2 .box-image-4 .media .action-btn .title:hover, .box-image-4 .media .action-btn .team-2 .landing .title-section-landing .title:hover, .team-2 .landing .title-section-landing .box-image-4 .media .action-btn .title:hover, .box-image-4 .media .action-btn .landing .title-section-landing .recent-blog .item .title:hover, .landing .title-section-landing .recent-blog .item .box-image-4 .media .action-btn .title:hover, .box-image-4 .media .action-btn .recent-blog .item .landing .title-section-landing .title:hover, .recent-blog .item .landing .title-section-landing .box-image-4 .media .action-btn .title:hover, .box-image-4 .media .action-btn .landing .title-section-landing .related .title-heading:hover, .landing .title-section-landing .related .box-image-4 .media .action-btn .title-heading:hover, .box-image-4 .media .action-btn .related .landing .title-section-landing .title-heading:hover, .related .landing .title-section-landing .box-image-4 .media .action-btn .title-heading:hover,
         .box-image-4 .media .action-btn .landing .title-section-landing .comments-box .title-heading:hover,
         .landing .title-section-landing .comments-box .box-image-4 .media .action-btn .title-heading:hover,
         .box-image-4 .media .action-btn .comments-box .landing .title-section-landing .title-heading:hover,
@@ -1924,7 +1907,6 @@ textarea.form-control {
     .box-image-4 .body .title {
       color: #000;
       font-size: 18px;
-      font-family: "Open Sans", sans-serif;
       font-weight: 700;
       margin-bottom: 0; }
       .box-image-4 .body .title a {
@@ -1948,7 +1930,9 @@ textarea.form-control {
       -webkit-transition-duration: 250ms;
       transition-duration: 250ms; }
     .box-image-4:hover .media .btn, .box-image-4:hover .media .btn-cta,
-    .box-image-4:hover .media .btn-primary, .box-image-4:hover .media .btn-secondary, .box-image-4:hover .media .landing .title-section-landing h4, .landing .title-section-landing .box-image-4:hover .media h4, .box-image-4:hover .media .landing .title-section-landing .lead, .landing .title-section-landing .box-image-4:hover .media .lead, .box-image-4:hover .media .landing .title-section-landing .team-1 .title, .landing .title-section-landing .team-1 .box-image-4:hover .media .title, .box-image-4:hover .media .team-1 .landing .title-section-landing .title, .team-1 .landing .title-section-landing .box-image-4:hover .media .title, .box-image-4:hover .media .landing .title-section-landing .team-2 .title, .landing .title-section-landing .team-2 .box-image-4:hover .media .title, .box-image-4:hover .media .team-2 .landing .title-section-landing .title, .team-2 .landing .title-section-landing .box-image-4:hover .media .title, .box-image-4:hover .media .landing .title-section-landing .recent-blog .item .title, .landing .title-section-landing .recent-blog .item .box-image-4:hover .media .title, .box-image-4:hover .media .recent-blog .item .landing .title-section-landing .title, .recent-blog .item .landing .title-section-landing .box-image-4:hover .media .title, .box-image-4:hover .media .landing .title-section-landing .related .title-heading, .landing .title-section-landing .related .box-image-4:hover .media .title-heading, .box-image-4:hover .media .related .landing .title-section-landing .title-heading, .related .landing .title-section-landing .box-image-4:hover .media .title-heading,
+    .box-image-4:hover .media .btn-primary,
+    .box-image-4:hover .media .portfolio_filter li a,
+    .portfolio_filter li .box-image-4:hover .media a, .box-image-4:hover .media .btn-secondary, .box-image-4:hover .media .landing .title-section-landing h4, .landing .title-section-landing .box-image-4:hover .media h4, .box-image-4:hover .media .landing .title-section-landing .lead, .landing .title-section-landing .box-image-4:hover .media .lead, .box-image-4:hover .media .landing .title-section-landing .team-1 .title, .landing .title-section-landing .team-1 .box-image-4:hover .media .title, .box-image-4:hover .media .team-1 .landing .title-section-landing .title, .team-1 .landing .title-section-landing .box-image-4:hover .media .title, .box-image-4:hover .media .landing .title-section-landing .team-2 .title, .landing .title-section-landing .team-2 .box-image-4:hover .media .title, .box-image-4:hover .media .team-2 .landing .title-section-landing .title, .team-2 .landing .title-section-landing .box-image-4:hover .media .title, .box-image-4:hover .media .landing .title-section-landing .recent-blog .item .title, .landing .title-section-landing .recent-blog .item .box-image-4:hover .media .title, .box-image-4:hover .media .recent-blog .item .landing .title-section-landing .title, .recent-blog .item .landing .title-section-landing .box-image-4:hover .media .title, .box-image-4:hover .media .landing .title-section-landing .related .title-heading, .landing .title-section-landing .related .box-image-4:hover .media .title-heading, .box-image-4:hover .media .related .landing .title-section-landing .title-heading, .related .landing .title-section-landing .box-image-4:hover .media .title-heading,
     .box-image-4:hover .media .landing .title-section-landing .comments-box .title-heading,
     .landing .title-section-landing .comments-box .box-image-4:hover .media .title-heading,
     .box-image-4:hover .media .comments-box .landing .title-section-landing .title-heading,
@@ -2968,17 +2952,11 @@ textarea.form-control {
 .grid {
   /*background: #DDD;*/ }
 
-/* clear fix */
-.isotope:after {
-  content: '';
-  display: block;
-  clear: both; }
-
 /* ---- .grid-item ---- */
 /* 5 columns, percentage width */
 .grid-item,
 .grid-sizer {
-  width: 32%; }
+  width: 33.33333333%; }
 
 @media (max-width: 425px) {
   .grid-item,
@@ -2986,15 +2964,19 @@ textarea.form-control {
     width: 100%; } }
 .grid-item {
   float: left;
-  /*height: 250px;*/
-  background: #ffffff;
-  margin-bottom: 2%; }
-  .grid-item img {
-    width: 100%; }
-  .grid-item:hover img {
-    opacity: 0.9;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-    filter: alpha(opacity=90); }
+  background: #ffffff; }
+  .grid-item a {
+    background-color: #111;
+    display: block;
+    margin: 8px; }
+    .grid-item a img {
+      width: 100%;
+      display: block;
+      margin-bottom: 0; }
+    .grid-item a:hover img {
+      opacity: 0.9;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+      filter: alpha(opacity=90); }
 
 .gutter-sizer {
   width: 2%; }
@@ -3002,6 +2984,95 @@ textarea.form-control {
 .grid-item--height2 {
   /*height: 450px; */ }
 
+.grid-item3,
+.grid-sizer3 {
+  width: 25%; }
+
+.grid3 {
+  /*background: #DDD;*/ }
+  .grid3 .grid-item3 {
+    float: left;
+    background: #ffffff;
+    position: relative; }
+    .grid3 .grid-item3 a {
+      background-color: #111;
+      display: block;
+      margin: 3px; }
+      .grid3 .grid-item3 a img {
+        width: 100%;
+        display: block;
+        margin-bottom: 0; }
+    .grid3 .grid-item3:before {
+      content: '';
+      position: absolute;
+      background: url(../images/link.gif) center top no-repeat;
+      top: 40%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      z-index: 9;
+      color: #ffffff;
+      font-size: 30px;
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      filter: alpha(opacity=0);
+      -webkit-transition: all ease .25s;
+      transition: all ease .25s; }
+    .grid3 .grid-item3:hover img {
+      opacity: 0.3;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+      filter: alpha(opacity=30); }
+    .grid3 .grid-item3:hover:before {
+      top: 50%;
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      filter: alpha(opacity=100); }
+  .grid3 .grid-item3--width2x {
+    width: 50%; }
+
+@media (max-width: 425px) {
+  .grid-item3,
+  .grid-sizer3 {
+    width: 100%; }
+
+  .grid-item3--width2x {
+    width: 100% !important; } }
+.grid-item-v1,
+.grid-sizer-v1 {
+  width: 25%; }
+
+.grid-v1, .grid-v2 {
+  /*background: #DDD;*/ }
+  .grid-v1 .grid-item-v1, .grid-v2 .grid-item-v1 {
+    float: left;
+    background: #ffffff;
+    position: relative; }
+    .grid-v1 .grid-item-v1 a, .grid-v2 .grid-item-v1 a {
+      background-color: #111;
+      display: block;
+      margin: 3px; }
+      .grid-v1 .grid-item-v1 a img, .grid-v2 .grid-item-v1 a img {
+        width: 100%;
+        display: block;
+        margin-bottom: 0; }
+    .grid-v1 .grid-item-v1:hover img, .grid-v2 .grid-item-v1:hover img {
+      opacity: 0.9;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+      filter: alpha(opacity=90); }
+  .grid-v1 .grid-item-v1--width2x, .grid-v2 .grid-item-v1--width2x {
+    width: 50%; }
+
+@media (max-width: 425px) {
+  .grid-item-v1,
+  .grid-sizer-v13 {
+    width: 100%; }
+
+  .grid-item-v1--width2x {
+    width: 100% !important; } }
 /* TIMELINE **/
 .timeline .year-timeline {
   padding-bottom: 50px;
@@ -3294,18 +3365,18 @@ textarea.form-control {
   .navbar-main .fa {
     font-size: 18px; }
   .navbar-main .dropdown-menu {
-    background-color: #666666;
+    background-color: #eee;
     min-width: 180px;
-    color: #ffffff;
+    color: #111;
     padding: 0;
     border: 0;
     border-radius: 0; }
     .navbar-main .dropdown-menu > li a {
       padding: 10px 20px;
-      color: #ffffff; }
+      color: #111; }
       .navbar-main .dropdown-menu > li a:hover {
         background-color: transparent;
-        color: #FF0000; }
+        color: #999; }
   .navbar-main.stiky {
     position: fixed;
     background-color: #ffffff;
@@ -3603,7 +3674,7 @@ textarea.form-control {
   padding-top: 20px;
   text-align: center; }
   .slides-navigation a:hover {
-    color: #FF0000;
+    color: #111;
     border-color: #999;
     text-decoration: none; }
   .slides-navigation a .fa {
@@ -3633,20 +3704,20 @@ textarea.form-control {
     text-align: right; }
   .wrap-caption .sub-caption-heading {
     font-size: 15px;
-    font-family: "Raleway", sans-serif;
     letter-spacing: 2px; }
   .wrap-caption .caption-heading {
     line-height: 1.2em;
     color: #666666;
     font-size: 48px;
-    font-family: "Open Sans", sans-serif;
     font-weight: 700; }
   .wrap-caption .excerpt {
     margin-bottom: 50px;
-    font-size: 15px;
-    font-family: "Raleway", sans-serif; }
+    font-size: 18px;
+    letter-spacing: 5px; }
   .wrap-caption .btn, .wrap-caption .btn-cta,
-  .wrap-caption .btn-primary, .wrap-caption .btn-secondary, .wrap-caption .landing .title-section-landing h4, .landing .title-section-landing .wrap-caption h4, .wrap-caption .landing .title-section-landing .lead, .landing .title-section-landing .wrap-caption .lead, .wrap-caption .landing .title-section-landing .team-1 .title, .landing .title-section-landing .team-1 .wrap-caption .title, .wrap-caption .team-1 .landing .title-section-landing .title, .team-1 .landing .title-section-landing .wrap-caption .title, .wrap-caption .landing .title-section-landing .team-2 .title, .landing .title-section-landing .team-2 .wrap-caption .title, .wrap-caption .team-2 .landing .title-section-landing .title, .team-2 .landing .title-section-landing .wrap-caption .title, .wrap-caption .landing .title-section-landing .recent-blog .item .title, .landing .title-section-landing .recent-blog .item .wrap-caption .title, .wrap-caption .recent-blog .item .landing .title-section-landing .title, .recent-blog .item .landing .title-section-landing .wrap-caption .title, .wrap-caption .landing .title-section-landing .related .title-heading, .landing .title-section-landing .related .wrap-caption .title-heading, .wrap-caption .related .landing .title-section-landing .title-heading, .related .landing .title-section-landing .wrap-caption .title-heading,
+  .wrap-caption .btn-primary,
+  .wrap-caption .portfolio_filter li a,
+  .portfolio_filter li .wrap-caption a, .wrap-caption .btn-secondary, .wrap-caption .landing .title-section-landing h4, .landing .title-section-landing .wrap-caption h4, .wrap-caption .landing .title-section-landing .lead, .landing .title-section-landing .wrap-caption .lead, .wrap-caption .landing .title-section-landing .team-1 .title, .landing .title-section-landing .team-1 .wrap-caption .title, .wrap-caption .team-1 .landing .title-section-landing .title, .team-1 .landing .title-section-landing .wrap-caption .title, .wrap-caption .landing .title-section-landing .team-2 .title, .landing .title-section-landing .team-2 .wrap-caption .title, .wrap-caption .team-2 .landing .title-section-landing .title, .team-2 .landing .title-section-landing .wrap-caption .title, .wrap-caption .landing .title-section-landing .recent-blog .item .title, .landing .title-section-landing .recent-blog .item .wrap-caption .title, .wrap-caption .recent-blog .item .landing .title-section-landing .title, .recent-blog .item .landing .title-section-landing .wrap-caption .title, .wrap-caption .landing .title-section-landing .related .title-heading, .landing .title-section-landing .related .wrap-caption .title-heading, .wrap-caption .related .landing .title-section-landing .title-heading, .related .landing .title-section-landing .wrap-caption .title-heading,
   .wrap-caption .landing .title-section-landing .comments-box .title-heading,
   .landing .title-section-landing .comments-box .wrap-caption .title-heading,
   .wrap-caption .comments-box .landing .title-section-landing .title-heading,
@@ -3910,6 +3981,8 @@ textarea.form-control {
       transition-timing-function: ease-out;
       -webkit-transition-duration: 250ms;
       transition-duration: 250ms; }
+  .single-news .video, .news-item .video {
+    margin-bottom: 20px; }
   .single-news .blok-title, .news-item .blok-title {
     margin-top: 40px;
     margin-bottom: 10px;
@@ -4156,6 +4229,47 @@ textarea.form-control {
       .list-info li .info-text:before {
         content: ' : '; }
 
+/* v1 */
+.headerV1 {
+  background: #000 url(../images/banner-page.jpg) top right no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%; }
+  .headerV1 .jumbotron {
+    padding-top: 150px; }
+  .headerV1 .action-btn {
+    text-align: center;
+    margin-top: 100px; }
+
+.navfilter {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 100px; }
+
+.portfolio_filter {
+  margin: 0;
+  padding: 0; }
+  .portfolio_filter li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 2px;
+    text-decoration: none;
+    letter-spacing: 4px; }
+    .portfolio_filter li a {
+      text-transform: none; }
+
+/* jQuery.YoutubeBackground */
+#video {
+  position: relative;
+  background: transparent;
+  height: 100%;
+  overflow: hidden; }
+
+.ytplayer-container {
+  position: absolute;
+  top: 0;
+  z-index: -1; }
+
 /**
  * 7. - FOOTER
  * -----------------------------------------------------------------------------
@@ -4261,11 +4375,12 @@ textarea.form-control {
     width: 100%; }
 
   .btn-sidebar.btn, .btn-sidebar.btn-cta,
-  .btn-sidebar.btn-primary, .btn-sidebar.btn-secondary, .landing .title-section-landing h4.btn-sidebar, .landing .title-section-landing .btn-sidebar.lead, .landing .title-section-landing .team-1 .btn-sidebar.title, .team-1 .landing .title-section-landing .btn-sidebar.title, .landing .title-section-landing .team-2 .btn-sidebar.title, .team-2 .landing .title-section-landing .btn-sidebar.title, .landing .title-section-landing .recent-blog .item .btn-sidebar.title, .recent-blog .item .landing .title-section-landing .btn-sidebar.title, .landing .title-section-landing .related .btn-sidebar.title-heading, .related .landing .title-section-landing .btn-sidebar.title-heading,
+  .btn-sidebar.btn-primary,
+  .portfolio_filter li a.btn-sidebar, .btn-sidebar.btn-secondary, .landing .title-section-landing h4.btn-sidebar, .landing .title-section-landing .btn-sidebar.lead, .landing .title-section-landing .team-1 .btn-sidebar.title, .team-1 .landing .title-section-landing .btn-sidebar.title, .landing .title-section-landing .team-2 .btn-sidebar.title, .team-2 .landing .title-section-landing .btn-sidebar.title, .landing .title-section-landing .recent-blog .item .btn-sidebar.title, .recent-blog .item .landing .title-section-landing .btn-sidebar.title, .landing .title-section-landing .related .btn-sidebar.title-heading, .related .landing .title-section-landing .btn-sidebar.title-heading,
   .landing .title-section-landing .comments-box .btn-sidebar.title-heading,
   .comments-box .landing .title-section-landing .btn-sidebar.title-heading,
   .landing .title-section-landing .leave-comment-box .btn-sidebar.title-heading,
-  .leave-comment-box .landing .title-section-landing .btn-sidebar.title-heading, .btn-sidebar.btn-white, .btn-sidebar.btn-primary, .btn-sidebar.btn-secondary, .landing .title-section-landing h4.btn-sidebar, .landing .title-section-landing .btn-sidebar.lead, .landing .title-section-landing .team-1 .btn-sidebar.title, .team-1 .landing .title-section-landing .btn-sidebar.title, .landing .title-section-landing .team-2 .btn-sidebar.title, .team-2 .landing .title-section-landing .btn-sidebar.title, .landing .title-section-landing .recent-blog .item .btn-sidebar.title, .recent-blog .item .landing .title-section-landing .btn-sidebar.title, .landing .title-section-landing .related .btn-sidebar.title-heading, .related .landing .title-section-landing .btn-sidebar.title-heading,
+  .leave-comment-box .landing .title-section-landing .btn-sidebar.title-heading, .btn-sidebar.btn-white, .btn-sidebar.btn-primary, .portfolio_filter li a.btn-sidebar, .btn-sidebar.btn-secondary, .landing .title-section-landing h4.btn-sidebar, .landing .title-section-landing .btn-sidebar.lead, .landing .title-section-landing .team-1 .btn-sidebar.title, .team-1 .landing .title-section-landing .btn-sidebar.title, .landing .title-section-landing .team-2 .btn-sidebar.title, .team-2 .landing .title-section-landing .btn-sidebar.title, .landing .title-section-landing .recent-blog .item .btn-sidebar.title, .recent-blog .item .landing .title-section-landing .btn-sidebar.title, .landing .title-section-landing .related .btn-sidebar.title-heading, .related .landing .title-section-landing .btn-sidebar.title-heading,
   .landing .title-section-landing .comments-box .btn-sidebar.title-heading,
   .comments-box .landing .title-section-landing .btn-sidebar.title-heading,
   .landing .title-section-landing .leave-comment-box .btn-sidebar.title-heading,

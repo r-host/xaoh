@@ -128,8 +128,7 @@ $(document).ready(function(){
 		itemSelector: '.grid-item',
 		isFitWidth: true,
 		masonry: {
-			columnWidth: '.grid-sizer',
-			gutter: '.gutter-sizer'
+			columnWidth: '.grid-sizer'
 		}
 	});
 
@@ -141,6 +140,73 @@ $(document).ready(function(){
 			gutter: '.gutter-sizer2'
 		}
 	});
+
+	var $grid = $('.grid3');
+	$grid.isotope({
+		itemSelector: '.grid-item3',
+		isFitWidth: true,
+		masonry: {
+			columnWidth: '.grid-sizer3'
+		}
+	});
+
+	var $gridv1 = $('.grid-v1');
+	$gridv1.isotope({
+		itemSelector: '.grid-item-v1',
+		isFitWidth: true,
+		filter: '.photo',
+		masonry: {
+			columnWidth: '.grid-sizer-v1'
+		}
+	});
+	$('.portfolio_filter a').on('click', function() {
+ 		$('.portfolio_filter .active').removeClass('active');
+		$(this).addClass('active');
+ 
+		var selector = $(this).attr('data-filter');
+		$gridv1.isotope({
+			filter: selector,
+			animationOptions: {
+				duration: 500,
+				animationEngine : "jquery"
+			}
+		});
+		return false;
+ 	});
+
+ 	var $gridv2 = $('.grid-v2');
+	$gridv2.isotope({
+		itemSelector: '.grid-item-v1',
+		isFitWidth: true,
+		filter: '.graphic',
+		masonry: {
+			columnWidth: '.grid-sizer-v1'
+		}
+	});
+	$('.portfolio_filter a').on('click', function() {
+ 		$('.portfolio_filter .active').removeClass('active');
+		$(this).addClass('active');
+ 
+		var selector = $(this).attr('data-filter');
+		$gridv2.isotope({
+			filter: selector,
+			animationOptions: {
+				duration: 500,
+				animationEngine : "jquery"
+			}
+		});
+		return false;
+ 	});
+
+	/* =================================
+	jQuery.YoutubeBackground
+	=================================== */
+	$('#video').YTPlayer({
+	    fitToBackground: true,
+	    videoId: '5ZmVn25vs-k'
+	});
+
+
 
 	/* =================================
 	SCROLL TO
@@ -184,7 +250,7 @@ $(document).ready(function(){
 	/* =================================
 	MAGNIFIC POPUP
 	=================================== */
-	$('.grid').magnificPopup({
+	$('.grid, .grid-v1, .grid-v2').magnificPopup({
 		delegate: 'a',
 		type: 'image',
 		tLoading: 'Loading image #%curr%...',
