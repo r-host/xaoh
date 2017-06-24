@@ -133,7 +133,7 @@ $(document).ready(function(){
 	ISOTOP
 	=================================== */	
 
-	$('.grid').isotope({
+	var $grid = $('.grid').isotope({
 		itemSelector: '.grid-item',
 		isFitWidth: true,
 		masonry: {
@@ -141,7 +141,11 @@ $(document).ready(function(){
 		}
 	});
 
-	$('.grid2').isotope({
+	$grid.imagesLoaded().progress( function() {
+		$grid.isotope('layout');
+	});
+
+	var $grid2 = $('.grid2').isotope({
 		itemSelector: '.grid-item2',
 		percentPosition: true,
 		masonry: {
@@ -150,13 +154,20 @@ $(document).ready(function(){
 		}
 	});
 
-	var $grid = $('.grid3');
-	$grid.isotope({
+	$grid2.imagesLoaded().progress( function() {
+		$grid2.isotope('layout');
+	});
+
+	var $grid3 = $('.grid3').isotope({
 		itemSelector: '.grid-item3',
 		isFitWidth: true,
 		masonry: {
 			columnWidth: '.grid-sizer3'
 		}
+	});
+
+	$grid3.imagesLoaded().progress( function() {
+		$grid3.isotope('layout');
 	});
 
 	var $gridv1 = $('.grid-v1');
@@ -168,6 +179,11 @@ $(document).ready(function(){
 			columnWidth: '.grid-sizer-v1'
 		}
 	});
+
+	$gridv1.imagesLoaded().progress( function() {
+		$gridv1.isotope('layout');
+	});
+
 	$('.portfolio_filter a').on('click', function() {
  		$('.portfolio_filter .active').removeClass('active');
 		$(this).addClass('active');
@@ -192,6 +208,11 @@ $(document).ready(function(){
 			columnWidth: '.grid-sizer-v1'
 		}
 	});
+
+	$gridv2.imagesLoaded().progress( function() {
+		$gridv2.isotope('layout');
+	});
+
 	$('.portfolio_filter a').on('click', function() {
  		$('.portfolio_filter .active').removeClass('active');
 		$(this).addClass('active');
