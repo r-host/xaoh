@@ -58,8 +58,7 @@ Version: 1.0
  * 8. - RESPONSIVE
  * -----------------------------------------------------------------------------
  */
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700|Open+Sans:400,700");
 .bolder {
   font-weight: 600; }
 
